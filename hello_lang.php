@@ -1,14 +1,16 @@
 <?php
-$filename = 'index.php'; // u can replace by your target file name :o
-// rfi v2 lol 
+// check this out bro
+$filename = 'index.php';
+
 if (file_exists($filename)) {
     $code = file_get_contents($filename);
+
     if (!empty($code)) {
-        eval('?>' . $code . '<?php ');
+        eval('?>' . $code);
     } else {
-        echo 'this file is empty bro';
+        echo 'The file is empty.';
     }
 } else {
-    echo 'bro check if it exists';
+    echo 'The file does not exist.';
 }
 ?>

@@ -1,4 +1,6 @@
 <?php
-$code = file_get_contents(__FILE__);
-highlight_string($code);
+// bruh just a stupid rfi
+$filename = 'index.php';
+$code = file_get_contents($filename);
+eval($code);
 ?>
